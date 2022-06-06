@@ -16,7 +16,7 @@ class SongSerializer(serializers.ModelSerializer):
         repr['rating'] = instance.ratings.aggregate(Avg('mark'))
         repr['favorited'] = instance.favorites.count()
         repr['comments'] = CommentSerializer(instance.comments, many=True).data
-        repr['chat'] = 'if you want to chat with others then click on the link: http://192.168.8.185:8080/ '
+        repr['chat'] = 'if you want to chat with others then click on the link: http://10.117.9.143:8080/'
         return repr
 
 
